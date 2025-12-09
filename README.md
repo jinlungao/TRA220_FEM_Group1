@@ -1,3 +1,4 @@
+```
 TRA220_FEM_Group1/
 │
 ├── benchmarks/                 # Benchmark datasets & performance evaluation resources
@@ -13,9 +14,10 @@ TRA220_FEM_Group1/
 │
 ├── src/
 │   ├── utils/
-│   │   └── save_run_to_json.py # Utility for saving FEM run metrics to JSON
+│   │   └── save_run_to_json.py # JSON logging utilities
 │   │
-│   ├── EuropeanOption_CPU.py   # CPU implementation of the FEM option pricing solver
+│   ├── EuropeanOption_CPU.py   # CPU implementation of the FEM solver
 │   └── EuropeanOption_GPU.py   # GPU-accelerated solver (CUDA / CuPy)
 │
 └── README.md                   # Project documentation
+```
