@@ -4,6 +4,7 @@ TRA220_FEM_Group1/
 ├── benchmarks/                 # Benchmark datasets & performance evaluation resources
 │
 ├── data/                       # Output directory for FEM run results (e.g., JSON metrics)
+│   ├── picture/                # Pictures Showing the Experimental Results
 │   └── fem_run.json
 │
 ├── scripts/                    # Main execution scripts
