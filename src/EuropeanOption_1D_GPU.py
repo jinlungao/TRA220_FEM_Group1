@@ -72,7 +72,7 @@ def european_call_price_1D_gpu(
     C = cp.zeros((m + 1, m + 1), dtype=dtype)
     K_mat = cp.zeros((m + 1, m + 1), dtype=dtype)
 
-    # Matrix assembly (still Python loop, but everything on GPU; m=200~几千没问题)
+    # Matrix assembly
     for e in range(m):
         idx = cp.array([e, e + 1])
         C[cp.ix_(idx, idx)] += C_e
