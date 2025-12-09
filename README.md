@@ -1,21 +1,21 @@
 TRA220_FEM_Group1/
 │
-├── benchmarks/               # Benchmark datasets & performance evaluation resources
+├── benchmarks/                 # Benchmark datasets & performance evaluation resources
 │
-├── data/                     # Output directory for run results (e.g., JSON metrics)
+├── data/                       # Output directory for FEM run results (e.g., JSON metrics)
 │   └── fem_run.json
 │
-├── scripts/                  # Main executables
-│   ├── run_fem_cpu.py        # Entry point for CPU FEM solver
-│   └── run_fem_gpu.py        # Entry point for GPU FEM solver
+├── scripts/                    # Main execution scripts
+│   ├── run_fem_cpu.py          # Entry point for CPU FEM solver
+│   └── run_fem_gpu.py          # Entry point for GPU FEM solver
 │
-├── sources/                  # Supporting materials / additional resources
+├── sources/                    # Additional supporting materials
 │
 ├── src/
 │   ├── utils/
-│   │   └── save_run_to_json.py   # JSON logging utilities
+│   │   └── save_run_to_json.py # Utility for saving FEM run metrics to JSON
 │   │
-│   ├── EuropeanOption_CPU.py     # FEM solver (CPU implementation)
-│   └── EuropeanOption_GPU.py     # FEM solver (GPU-accelerated, CUDA/CuPy)
+│   ├── EuropeanOption_CPU.py   # CPU implementation of the FEM option pricing solver
+│   └── EuropeanOption_GPU.py   # GPU-accelerated solver (CUDA / CuPy)
 │
-└── README.md                 # Project documentation
+└── README.md                   # Project documentation
