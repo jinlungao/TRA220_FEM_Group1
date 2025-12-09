@@ -3,6 +3,21 @@ import numpy as np
 from src.EuropeanOption_1D_CPU import european_call_1D_price
 from src.utils.save_run_to_json import save_cpu_run_to_json
 
+def numpy_to_python(obj):
+    if isinstance(obj, np.integer):
+        return int(obj)
+    elif isinstance(obj, np.floating):
+        return float(obj)
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+    elif isinstance(obj, dict):
+        return {k: numpy_to_python(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [numpy_to_python(v) for v in obj]
+    else:
+        return obj
+
+
 if __name__ == "__main__":
     K = 10.0
     S0 = 10.0
@@ -26,6 +41,7 @@ if __name__ == "__main__":
             m=m0,
             n=200
         )
-        save_cpu_run_to_json(metrics)
+        clean_metrics = numpy_to_python(metrics)
+        save_cpu_run_to_json(clean_metrics)
 
     print("All done!")
