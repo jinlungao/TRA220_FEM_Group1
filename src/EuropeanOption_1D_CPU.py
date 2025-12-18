@@ -18,7 +18,7 @@ def european_call_1D_price(
     T=1.0,  #maturity
     r=0.10, #risk-free interest rate
     sigma=0.20,  #volatility
-    S_max_factor=4.0,  #Right-side spatial truncation multiple
+    S_max_factor=4.0,  #Right-side spatial truncation multiple  w
     m=200,       # finite elements
     n=200        # time steps
 ):

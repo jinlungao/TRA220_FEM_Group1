@@ -1,6 +1,8 @@
 import numpy as np
 
 from src.EuropeanOption_1D_GPU import european_call_price_1D_gpu
+from src.EuropeanOption_1D_GPU_newAssembler import european_call_price_1D_gpu_newAssembler
+from src.EuropeanOption_1D_GPU_solver_cg import european_call_price_1D_gpu_cg
 from src.utils.save_run_to_json import save_gpu_run_to_json
 
 
@@ -33,7 +35,7 @@ if __name__ == "__main__":
 
     for m0 in m_values:
         print(f"Running m = {m0} ...")
-        price, metrics = european_call_price_1D_gpu(
+        price, metrics = european_call_price_1D_gpu_cg(
             S0=S0,
             K=K,
             T=T,
